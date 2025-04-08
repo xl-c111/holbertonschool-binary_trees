@@ -25,14 +25,13 @@ binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 
 	if (parent->left == NULL)                    
 	{	newNode->left = NULL;                 /* if there is no left child, newNode left ptr must be NULL */
-		parent->left = newNode;               /* assign newNode as the parent's left child */
 	}
 	else
 	{
 		newNode->left = parent->left;         /* parent->left originally points old left child, now assigns newNode as parent's left child */
 		newNode->left->parent = newNode;      /* newNode->left now points to old_left, this line equals to old_left->parent = newNode */
 		                                      /* updates old_left's parent ptr to newNode instead of parent */
-		parent->left = newNode;           
 	}
+	parent->left = newNode;               /* assign newNode as the parent's left child */
 	return (newNode);
 }
