@@ -5,6 +5,9 @@
  * binary_tree_height - measures the height of a binary tree
  * @tree: a pointer to the root node of the tree to measure the height
  * Return: the height of a binary tree, 0 if tree is NULL
+ * Description: there are two ways to measure the height of a binary tree
+ *              height == number of edges (leaf node = 0; tree with one node = 0; formula of a perfect tree: 2^{h+1} - 1)
+ *              height == number of nodes (leaf node = 1; tree with one node = 1; formula of a perfect tree: 2^{h} - 1)
  *
  */
 size_t binary_tree_height(const binary_tree_t *tree)
