@@ -16,6 +16,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
 		return (0);
 	/* if (tree->left == NULL && tree->right == NULL) */
 	/*	return (0);                               */
+	/* doesn't need this line because if we check the balance factor of a leaf, both left and right side are NULL */
 
 	left_height = binary_tree_height(tree->left);
 	right_height = binary_tree_height(tree->right);
